@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Noticias_DestaquesController;
+use App\Http\Controllers\ExemploController;
 
 
 /*
@@ -15,9 +16,15 @@ use App\Http\Controllers\Noticias_DestaquesController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// GET |POST | PUT| DELETE
+
+Route::get('/',[ExemploController::class,'index']);
+Route::post('/',[ExemploController::class,'cadastrar']);
+
+
+// Route::get('/', function () {
+//     return view('exemplo');
+// });
 
 
 // Route::get('/cadastrar',[Noticias_DestaquesController::class,'novo']);
